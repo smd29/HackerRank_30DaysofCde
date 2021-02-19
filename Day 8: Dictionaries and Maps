@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = int(input())
+dict_book = dict()
+for i in range(0,n):
+    name, number = input().split()
+    dict_book[name] = number
+    
+for i in range(0,n):
+    try:
+        name = input()
+        if name in dict_book:
+            print(f"{name}={dict_book[name]}")
+        else:
+            print("Not found")
+    except:
+        break
